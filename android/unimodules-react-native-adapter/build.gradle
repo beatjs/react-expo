@@ -1,0 +1,63 @@
+buildscript {
+  // Simple helper that allows the root project to override versions declared by this library.
+  ext.safeExtGet = { prop, fallback ->
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+  }
+
+  repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+  }
+
+  dependencies {
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${safeExtGet("kotlinVersion", "1.4.21")}")
+  }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'kotlin-android'
+
+group = 'org.unimodules'
+version = '6.2.2'
+
+
+// Simple helper that allows the root project to override versions declared by this library.
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+android {
+  compileSdkVersion safeExtGet("compileSdkVersion", 30)
+
+  defaultConfig {
+    minSdkVersion safeExtGet("minSdkVersion", 21)
+    targetSdkVersion safeExtGet("targetSdkVersion", 30)
+    versionCode 23
+    versionName "6.2.2"
+  }
+  lintOptions {
+    abortOnError false
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+repositories {
+  mavenCentral()
+  google()
+  jcenter()
+  maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+  implementation project(':unimodules-core')
+  implementation project(':unimodules-font-interface')
+  implementation project(':unimodules-permissions-interface')
+  implementation project(':unimodules-image-loader-interface')
+  implementation project(':unimodules-app-loader')
+  implementation 'com.github.beatjs:react-android:0.63.4.0'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
+}

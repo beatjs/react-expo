@@ -5,7 +5,6 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'ReactExpo' do
-	pod 'react-expo', :path => '../'
-#  pod 'react-expo/UMCore', :path => '../'
+	pod 'react-expo'
 end
 

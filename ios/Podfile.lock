@@ -126,7 +126,7 @@ PODS:
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - react-expo (from `../`)
+  - react-expo
 
 SPEC REPOS:
   trunk:
@@ -137,16 +137,13 @@ SPEC REPOS:
     - libwebp
     - lottie-ios
     - react-component
+    - react-expo
     - react-ios
     - SDWebImage
     - SDWebImageWebPCoder
     - Sentry
     - SPTPersistentCache
     - Yoga
-
-EXTERNAL SOURCES:
-  react-expo:
-    :path: "../"
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
@@ -156,7 +153,7 @@ SPEC CHECKSUMS:
   libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   react-component: 33619ff556e5f7d0e8df6ba2976b79382f7af137
-  react-expo: 7a934ae7352d74a4b3035ed206f5776bbde988f1
+  react-expo: 6bde3c2820ea764caf1321a1f1846aa0cc801040
   react-ios: a25cc4b54d365fe466a430aec8a8c4ec4a0b5ce0
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
@@ -164,6 +161,6 @@ SPEC CHECKSUMS:
   SPTPersistentCache: df36ea46762d7cf026502bbb86a8b79d0080dff4
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
 
-PODFILE CHECKSUM: d2724a6f8c2cd5558813107148a94d0abe05e916
+PODFILE CHECKSUM: 60c74beb115199bf5150aedd285dad99f93c32fa
 
 COCOAPODS: 1.10.1

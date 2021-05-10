@@ -1,4 +1,4 @@
-package com.beatjs.react;
+package com.beatjs.react.expo;
 
 import java.util.Arrays;
 import java.util.Collections;
