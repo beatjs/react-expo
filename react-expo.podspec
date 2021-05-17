@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'react-expo'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.summary = 'An runtime base on react-native.'
   s.description = 
 	<<-DESC
@@ -17,8 +17,15 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     "DEFINES_MODULE" => "YES"
   }
-  s.default_subspec = 'All'
-  s.subspec 'All' do |ss|
+  s.default_subspec = 'source'
+
+  s.subspec "framework" do |ss|
+    ss.vendored_frameworks = "ios/#{s.module_name}.xcframework"
+    ss.dependency "react-component/framework", "~> 1.1.0"
+  end
+
+  s.subspec 'source' do |ss|
+    ss.dependency "react-component", "~> 1.1.0"
     ss.dependency 'react-expo/EXApplication'
     ss.dependency 'react-expo/EXConstants'
     ss.dependency 'react-expo/EXErrorRecovery'

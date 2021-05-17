@@ -5,6 +5,6 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'ReactExpo' do
-	pod 'react-expo'
+	pod 'react-expo', :path => '../'
 end
 
