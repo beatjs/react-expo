@@ -58,6 +58,6 @@ dependencies {
   implementation project(':unimodules-permissions-interface')
   implementation project(':unimodules-image-loader-interface')
   implementation project(':unimodules-app-loader')
-  implementation 'com.github.beatjs:react-android:0.63.4.0'
+  implementation 'com.github.beatjs:react-android:0.63.4.+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
 }
