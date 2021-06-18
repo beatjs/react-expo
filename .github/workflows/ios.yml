@@ -26,4 +26,4 @@ jobs:
     - name: Xcode build
       run: | 
         cd ios
-        xcodebuild -workspace ReactCodePush.xcworkspace -scheme ReactCodePush
+        xcodebuild -workspace ReactExpo.xcworkspace -scheme ReactExpo
